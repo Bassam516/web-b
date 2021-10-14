@@ -1,0 +1,38 @@
+.navbar-dark .navbar-brand,
+.dropdown-divider,
+.intro span,
+.features i,
+.clients span,
+.foot h3,
+.copyright span,
+.custom-color i,
+.scroll-top,
+.skills .hvr-underline-from-left,
+.ceo .hvr-underline-from-left {
+    color: #d70000;
+}
+
+.carousel-indicators .active,
+.hvr-shutter-out-horizontal:before,
+.skills .hvr-underline-from-left:before,
+.ceo .hvr-underline-from-left:before,
+.btn-outline-success:hover,
+.card-header{
+    background-color: #d70000;
+}
+
+.custom-color .color {
+    border: 2px solid #d70000;
+}
+
+.scroll-top:hover {
+    border: 3px solid #d70000;
+}
+.btn-outline-success {
+    color: #d70000;
+    border-color: #d70000;
+}
+.skills .hvr-underline-from-left,
+.ceo .hvr-underline-from-left {
+    border: 1.6px solid #d70000;
+}
