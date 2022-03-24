@@ -1,14 +1,4 @@
-$(document).ready(function () {
-    //nicescroll
-    $("body").niceScroll({
-        cursorcolor: "#6c757d",
-        cursorwidth: "10px",
-        mousescrollstep: "12",
-        scrollspeed: "20"
-    });
-
-    $(".nicescroll-rails").css("z-index", "2000");
-
+$(document).ready(function () { 
     //change bage color
     $(".custom-color i").click(function () {
         $(".custom-color .color").fadeToggle();
@@ -26,32 +16,32 @@ $(document).ready(function () {
         .eq(6).css("backgroundColor", "#d1df00").end()
         .eq(7).css("backgroundColor", "#00e7dc");
 
-
     colorLi.click(function () {
-        $("link[href*='theme']").attr("href", $(this).attr("data-value"));
+        localStorage.setItem('theme', $(this).attr("data-value"));
+        $("link[href*='theme']").attr("href", localStorage.getItem('theme'));
     });
 
-    //scroll to top
-    var btn = $(".scroll-top"),
-        i = $(".custom-color");//chang color icon
-
-    $(window).scroll(function () {
-
-        $(this).scrollTop() >= 700 ? btn.show() : btn.hide();
-        $(this).scrollTop() >= 400 ? i.show() : i.hide();//show chang color icon
-    });
-
-    btn.click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 600);
-    });
+    $("link[href*='theme']").attr("href", localStorage.getItem('theme'));
+});
 
 
+//scroll to top
+var btn = $(".scroll-top"),
+i = $(".custom-color");//chang color icon
+
+$(window).scroll(function () {
+
+$(this).scrollTop() >= 700 ? btn.show() : btn.hide();
+$(this).scrollTop() >= 400 ? i.show() : i.hide();//show chang color icon
+});
+
+btn.click(function () {
+$("html, body").animate({ scrollTop: 0 }, 600);
 });
 
 //loding screen
 
 $(window).on('load',function () {
-    
 
     //loding
     $(".loding .spinner").fadeOut(2000, function () {
