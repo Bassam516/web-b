@@ -16,6 +16,7 @@ $(document).ready(function () {
         .eq(6).css("backgroundColor", "#d1df00").end()
         .eq(7).css("backgroundColor", "#00e7dc");
 
+    localStorage.setItem('theme', 'css/default-theme.css');
     colorLi.click(function () {
         localStorage.setItem('theme', $(this).attr("data-value"));
         $("link[href*='theme']").attr("href", localStorage.getItem('theme'));
